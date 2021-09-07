@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=2]
+
+[sub_resource type="CapsuleShape" id=1]
+
+[sub_resource type="SpatialMaterial" id=2]
+albedo_color = Color( 0.380392, 0.388235, 0.886275, 1 )
+
+[node name="CUBE" type="RigidBody"]
+transform = Transform( 0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -0.125072, 0.0992121, -0.119376 )
+mode = 1
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 1 )
+
+[node name="CSGBox" type="CSGBox" parent="."]
+material_override = SubResource( 2 )
